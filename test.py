@@ -1,6 +1,6 @@
-from main import encrypted_message, decrypted_message
+from main import decrypted_message, encrypted_message
 
-message = "Thsi is a test message of the encrytion and decryption function"
+message = "This is a test message of the encrytion and decryption function"
 
 #Test encryption function and return encrypted message string
 

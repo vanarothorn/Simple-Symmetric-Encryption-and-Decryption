@@ -28,26 +28,55 @@ def handle_decryption(encrypted_msg):
 root = tk.Tk()
 root.title("Nine Line Report")
 
-# Create input entry field
-location_txt = tk.Entry(root, width=50)
-callsign_radio_freq_txt = tk.Entry(root, width=50)
-number_of_patients_txt = tk.Entry(root, width=50)
-special_equipment_need_txt = tk.Entry(root, width=50)
-number_of_patient_type_txt = tk.Entry(root, width=50)
-security_pickup_site_txt = tk.Entry(root, width=50)
-site_marking_txt = tk.Entry(root, width=50)
-patient_nationality_txt = tk.Entry(root, width=50)
-nbc_contamination_txt = tk.Entry(root, width=50)
+# Set the geometry of the main application window
+root.geometry("800x600")  # Set the window size to 800x600
 
-location_txt.pack(pady=10)
-callsign_radio_freq_txt.pack(pady=10)
-number_of_patients_txt.pack(pady=10)
-special_equipment_need_txt.pack(pady=10)
-number_of_patient_type_txt.pack(pady=10)
-security_pickup_site_txt.pack(pady=10)
-site_marking_txt.pack(pady=10)
-patient_nationality_txt.pack(pady=10)
-nbc_contamination_txt.pack(pady=10)
+# Create input entry field
+location_label = tk.Label(root, text="Location:")
+location_label.pack(pady=1)
+location_txt = tk.Entry(root, width=50)
+location_txt.pack(pady=5)
+
+callsign_radio_freq_label = tk.Label(root,
+                                     text="Callsign and Radio Frequency:")
+callsign_radio_freq_label.pack(pady=1)
+callsign_radio_freq_txt = tk.Entry(root, width=50)
+callsign_radio_freq_txt.pack(pady=5)
+
+number_of_patients_label = tk.Label(root, text="Number of Patients:")
+number_of_patients_label.pack(pady=1)
+number_of_patients_txt = tk.Entry(root, width=50)
+number_of_patients_txt.pack(pady=5)
+
+special_equipment_need_label = tk.Label(root, text="Special Equipment Needed:")
+special_equipment_need_label.pack(pady=1)
+special_equipment_need_txt = tk.Entry(root, width=50)
+special_equipment_need_txt.pack(pady=5)
+
+number_of_patient_type_label = tk.Label(root, text="Number of Patient Type:")
+number_of_patient_type_label.pack(pady=1)
+number_of_patient_type_txt = tk.Entry(root, width=50)
+number_of_patient_type_txt.pack(pady=5)
+
+security_pickup_site_label = tk.Label(root, text="Security at Pickup Site:")
+security_pickup_site_label.pack(pady=1)
+security_pickup_site_txt = tk.Entry(root, width=50)
+security_pickup_site_txt.pack(pady=5)
+
+site_marking_label = tk.Label(root, text="Site Marking:")
+site_marking_label.pack(pady=1)
+site_marking_txt = tk.Entry(root, width=50)
+site_marking_txt.pack(pady=5)
+
+patient_nationality_label = tk.Label(root, text="Patient Nationality:")
+patient_nationality_label.pack(pady=1)
+patient_nationality_txt = tk.Entry(root, width=50)
+patient_nationality_txt.pack(pady=5)
+
+nbc_contamination_label = tk.Label(root, text="NBC Contamination:")
+nbc_contamination_label.pack(pady=1)
+nbc_contamination_txt = tk.Entry(root, width=50)
+nbc_contamination_txt.pack(pady=5)
 
 # Create Encrypt buttons
 encrypt_button = tk.Button(root,
