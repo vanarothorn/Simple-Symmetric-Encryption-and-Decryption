@@ -6,23 +6,36 @@ from main import decrypted_message, encrypted_message
 
 # Define a function to handle encryption and decryption
 def handle_encryption():
+  if not (location_txt.get().strip() or callsign_radio_freq_txt.get().strip()
+          or number_of_patients_txt.get().strip()
+          or special_equipment_need_txt.get().strip()
+          or number_of_patient_type_txt.get().strip()
+          or security_pickup_site_txt.get().strip()
+          or site_marking_txt.get().strip()
+          or patient_nationality_txt.get().strip()
+          or nbc_contamination_txt.get().strip()):
+    messagebox.showerror("Input Error", "Please fill in at least one field.")
+    return
+
   message = f"""Location: {location_txt.get()}
-      Callsign and Radio Frequency: {callsign_radio_freq_txt.get()}
-      Number of Patients: {number_of_patients_txt.get()}
-      Special Equipment Needed: {special_equipment_need_txt.get()}
-      Number of Patient Type: {number_of_patient_type_txt.get()}
-      Security at Pickup Site: {security_pickup_site_txt.get()}
-      Site Marking: {site_marking_txt.get()}
-      Patient Nationality: {patient_nationality_txt.get()}
-      NBC Contamination: {nbc_contamination_txt.get()}"""
+  Callsign and Radio Frequency: {callsign_radio_freq_txt.get()}
+  Number of Patients: {number_of_patients_txt.get()}
+  Special Equipment Needed: {special_equipment_need_txt.get()}
+  Number of Patient Type: {number_of_patient_type_txt.get()}
+  Security at Pickup Site: {security_pickup_site_txt.get()}
+  Site Marking: {site_marking_txt.get()}
+  Patient Nationality: {patient_nationality_txt.get()}
+  NBC Contamination: {nbc_contamination_txt.get()}"""
   encrypted_msg = encrypted_message(message)
   messagebox.showinfo("Encrypted Message", encrypted_msg.decode())
 
 
+# Can use main decrypt function to decrypt messages from db
+""""
 def handle_decryption(encrypted_msg):
   decrypted_msg = decrypted_message(encrypted_msg)
   messagebox.showinfo("Decrypted Message", decrypted_msg)
-
+"""
 
 # Create the main application window
 root = tk.Tk()
