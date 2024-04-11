@@ -7,6 +7,10 @@
         <li><strong>Encryption:</strong> Secure symmetric encryption of MEDEVAC requests.</li>
         <li><strong>Customizable Fields:</strong> Supports various data fields like Location, Callsign and Radio Frequency, Number of Patients, and more.</li>
     </ul>
+    
+<img src="https://github.com/vanarothorn/Simple-Symmetric-Encryption-and-Decryption/blob/main/Capture.PNG" width="600" height="500">
+<img src="https://github.com/vanarothorn/Simple-Symmetric-Encryption-and-Decryption/blob/main/encrypted.PNG" width=600 height="500">
+
 
 <h2>Getting Started</h2>
     <h3>Prerequisites</h3>
